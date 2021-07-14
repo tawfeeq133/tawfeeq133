@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>simple calculator</title>
+        <style>
+            body{
+                text-align: center;
+                font-family: sans-serif;
+                font-size: large;
+                font-weight: bolder;
+                margin:100px;
+                background-color: rgba(235, 225, 225, 0.548);
+                }
+            #result{
+                width:280px;
+                height:50px;
+                border:2px none black;
+                color:rgb(0, 0, 0);
+                border-radius: 20px;
+                outline:none;
+                margin-bottom:30px;
+                background-color:rgb(199, 199, 199);
+                text-align:right;
+                cursor:pointer;
+                font-size:xx-large;
+            }
+            button{
+                padding:17px;
+                width:60px;
+                border-radius:50px;
+                margin:5px;
+                border:1px grey none;
+                background-color:#1f1a24;
+                color:white;
+                cursor:pointer;
+
+            }
+            button:hover{
+                background-color: grey;
+            }
+          
+            div{
+                border:1px solid black;
+                width:300px;
+                border-radius:10px;
+                height:400px;
+                background-color:#332940 ;
+                margin-left:390px;
+                padding-top:100px;
+                box-shadow: 10px 10px 10px gray;
+            }
+            h1{
+                margin-left:20px;
+                font-size:xx-large;
+            }
+          
+          
+        </style>
+    </head>
+    <body>
+        <header><h1>SIMPLE CALCULATOR</h1></header>
+         <div>
+        <input type="text" id="result"><br>
+        <button value="1"  onclick="dis('1')">1</button>
+        <button value="2" onclick="dis('2')">2</button>
+        <button  value="3" onclick="dis('3')">3</button>
+        <button  value="+" onclick="dis('+')">+</button><br>
+        <button  value="4" onclick="dis('4')">4</button>
+        <button  value="5" onclick="dis('5')">5</button>
+        <button  value="6" onclick="dis('6')">6</button>
+        <button  value="-" onclick="dis('-')">-</button><br>
+        <button  value="7" onclick="dis('7')">7</button>
+        <button  value="8" onclick="dis('8')">8</button>
+        <button  value="9" onclick="dis('9')">9</button>
+        <button  value="*" onclick="dis('*')">*</button><br>
+        <button  value="." onclick="dis('.')">.</button>
+        <button  value="0" onclick="dis('0')">0</button>
+        <button  value="=" onclick="ans()">=</button>
+        <button  value="/" onclick="dis('/')">/</button><br>
+        </div>
+        <script>
+           function dis(x){
+               document.getElementById("result").value+=x;
+           }
+           function clr(){
+               document.getElementById("result").value="";
+           }
+           function ans(){
+               var f,g;
+               f=document.getElementById("result").value;
+               g=eval(f);
+               document.getElementById("result").value=g;
+           }
+
+        </script>
+    </body>
+</html>
